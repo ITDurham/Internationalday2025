@@ -48,8 +48,10 @@ h1 {
 
 /* Main Container Styling */
 .container {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.127), rgba(255, 255, 255, 0.322)), url("images/card.png");
   margin: 20px auto;
   max-width: 1000px;
+  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -57,12 +59,14 @@ h1 {
 
 /* Filter Card Styling */
 .filter-card {
-  background: #ffd700; /* Bright Yellow Background */
+  /* background: #ffd700; Bright Yellow Background */
+ 
   border: 2px solid #000080; /* Indigo Border */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 1000;
 }
 
 .filter-card:hover {
@@ -70,6 +74,10 @@ h1 {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
+.sample img{
+  width: 200px;
+  height: 200px;
+}
 .thumbnail {
   padding-top: 10px;
   width: 200px;
@@ -78,18 +86,20 @@ h1 {
 
 .filter-info {
   padding: 1px;
-  color:#000080;
+  color:rgba(0, 27, 81, 0.3);
 }
 
 .filter-info a {
   display: inline-block;
   text-decoration: none;
-  background-color: #000080; /* Indigo Button */
-  color: #ffd700; /* Bright Yellow Text */
+  background-color: rgba(0,27,81,0.9); /* Indigo Button */
+  color: white; /* Bright Yellow Text */
   padding: 10px 20px;
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s;
+  border-style: dotted;
+  border-color: white;
 }
 
 .filter-info a:hover {
